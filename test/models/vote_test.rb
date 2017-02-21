@@ -8,8 +8,8 @@ class VoteTest < ActiveSupport::TestCase
   def test_valid
     refute vote.valid?
 
-    vote.cat_id = 3  # TODO fix
-    vote.score  = 7
+    vote.cat   = cats :garfield
+    vote.score = 7
 
     assert vote.valid?
   end

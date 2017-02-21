@@ -2,7 +2,11 @@ require "test_helper"
 
 class CatsControllerTest < ActionDispatch::IntegrationTest
   def cat
-    @cat ||= cats :one
+    @cat ||= cats :garfield
+  end
+
+  def file
+    @file ||= Rack::Test::UploadedFile.new(File.join(ActionDispatch::IntegrationTest.fixture_path, "files/cat.jpg"), "image/jpg")
   end
 
   def test_index
@@ -17,7 +21,8 @@ class CatsControllerTest < ActionDispatch::IntegrationTest
 
   def test_create
     assert_difference "Cat.count" do
-      post cats_url, params: { cat: {  } }
+      post cats_url, params: { cat: {name: "Nermal",
+                                     pic:  file}}
     end
 
     assert_redirected_to cat_path(Cat.last)
@@ -34,7 +39,8 @@ class CatsControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_update
-    patch cat_url(cat), params: { cat: {  } }
+    patch cat_url(cat), params: { cat: {name: "Sylvester",
+                                        pic:   file }}
     assert_redirected_to cat_path(cat)
   end
 

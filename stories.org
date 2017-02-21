@@ -1,10 +1,11 @@
 * DONE New Rails Repo
 * DONE Minitest
 * Cats
-** TODO Cats have an image
+** DONE Cats have an image
 * DONE Votes 
 ** DONE Model: score (1 - 10), cat_id
 ** DONE Validations
+* TODO Associations
 * TODO Add Material Design
 * TODO Enable voting in the UI
 * TODO Store images in cloud storage 

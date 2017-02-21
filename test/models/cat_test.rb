@@ -6,6 +6,11 @@ class CatTest < ActiveSupport::TestCase
   end
 
   def test_valid
+    refute cat.valid?
+
+    cat.name = "Felix"
+    cat.pic = sample_file
+
     assert cat.valid?
   end
 end

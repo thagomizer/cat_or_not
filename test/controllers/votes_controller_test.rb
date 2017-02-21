@@ -2,7 +2,7 @@ require "test_helper"
 
 class VotesControllerTest < ActionDispatch::IntegrationTest
   def vote
-    @vote ||= votes :one
+    @vote ||= votes :garfield
   end
 
   def test_index
@@ -17,7 +17,8 @@ class VotesControllerTest < ActionDispatch::IntegrationTest
 
   def test_create
     assert_difference "Vote.count" do
-      post votes_url, params: { vote: { cat_id: vote.cat_id, score: vote.score } }
+      post votes_url, params: { vote: { cat_id: vote.cat_id,
+                                        score:  7 } }
     end
 
     assert_redirected_to vote_path(Vote.last)
@@ -34,7 +35,8 @@ class VotesControllerTest < ActionDispatch::IntegrationTest
   end
 
   def test_update
-    patch vote_url(vote), params: { vote: { cat_id: vote.cat_id, score: vote.score } }
+    patch vote_url(vote), params: { vote: { cat_id: vote.cat_id,
+                                            score: 6 } }
     assert_redirected_to vote_path(vote)
   end
 

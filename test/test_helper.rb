@@ -8,10 +8,14 @@ require "minitest/rails"
 # require "minitest/rails/capybara"
 
 # Uncomment for awesome colorful output
-# require "minitest/pride"
+require "minitest/pride"
 
 class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   # Add more helper methods to be used by all tests here...
+
+  def sample_file filename = "cat.jpg"
+    File.new("#{Rails.root}/test/fixtures/files/#{filename}")
+  end
 end
