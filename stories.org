@@ -5,8 +5,8 @@
 * DONE Votes 
 ** DONE Model: score (1 - 10), cat_id
 ** DONE Validations
-* TODO Associations
-* TODO Add Material Design
+* DONE Associations
+* DONE Add Material Design
 * TODO Enable voting in the UI
 * TODO Store images in cloud storage 
 * TODO Cat Rank Summary

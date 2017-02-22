@@ -32,15 +32,18 @@ gem 'jbuilder', '~> 2.5'
 
 gem "paperclip"
 gem "simple_form"
+gem 'material_design_lite-sass'
 
 group :production do
   gem 'mysql2', '>= 0.3.18', '< 0.5'
 end
 
-
 group :development, :test do
   gem 'byebug', platform: :mri
   gem "minitest-rails", ">= 2.0"
+  gem "minitest"
+  gem "ZenTest"
+  gem "autotest-rails"
 end
 
 group :development do
