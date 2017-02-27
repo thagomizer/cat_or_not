@@ -10,12 +10,9 @@
 #   http://dev.mysql.com/doc/refman/5.7/en/old-client.html
 #
 default: &default
-  adapter: mysql2
+  adapter: sqlite3
   encoding: utf8
   pool: 5
-  username: root
-  password:
-  socket: /tmp/mysql.sock
 
 development:
   <<: *default
@@ -49,6 +46,11 @@ test:
 #
 production:
   <<: *default
+  adapter: mysql2
+  encoding: utf8
+  pool: 5
   database: CatOrNot_production
-  username: CatOrNot
-  password: <%= ENV['CATORNOT_DATABASE_PASSWORD'] %>
+  username: rails
+  password: rails
+  host: 173.194.86.92
+

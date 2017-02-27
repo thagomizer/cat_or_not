@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170220232537) do
 
-  create_table "cats", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "cats", force: :cascade do |t|
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.string   "pic_file_name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170220232537) do
     t.string   "name"
   end
 
-  create_table "votes", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
+  create_table "votes", force: :cascade do |t|
     t.integer  "score"
     t.integer  "cat_id"
     t.datetime "created_at", null: false

@@ -31,11 +31,15 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem "paperclip"
+gem "fog"
+gem "fog-google"
 gem "simple_form"
-gem 'material_design_lite-sass'
+gem "materialize-sass"
+gem "material_icons"
 
 group :production do
   gem 'mysql2', '>= 0.3.18', '< 0.5'
+  gem "stackdriver"
 end
 
 group :development, :test do
