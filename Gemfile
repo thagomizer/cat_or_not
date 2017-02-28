@@ -31,7 +31,6 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem "paperclip"
-gem "fog"
 gem "fog-google"
 gem "simple_form"
 gem "materialize-sass"

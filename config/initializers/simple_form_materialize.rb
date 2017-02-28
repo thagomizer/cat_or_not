@@ -1,7 +1,7 @@
 # Use this setup block to configure all options available in SimpleForm.
 SimpleForm.setup do |config|
   config.error_notification_class = "alert alert-danger"
-  config.button_class = "btn waves-effect"
+  config.button_class = "btn"
   config.boolean_label_class = nil
   config.boolean_style = :inline
 
@@ -197,8 +197,10 @@ SimpleForm.setup do |config|
     end
 
     b.wrapper tag: :div, class: "file-path-wrapper" do |ba|
-      ba.use :input, class: "file-path validate", type: "text",
-             placeholder: "Browse...", error_class: "invalid"
+      # name and id empty strings otherwise both the file input and
+      # this wrapper end up being called the same name.
+      ba.use :input, class: "file-path validate file option", type: "text",
+             placeholder: "Browse...", error_class: "invalid", name: "", id: ""
     end
   end
 

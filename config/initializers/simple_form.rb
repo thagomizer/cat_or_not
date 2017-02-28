@@ -164,20 +164,20 @@ SimpleForm.setup do |config|
   # config.i18n_scope = 'simple_form'
 end
 
-# Material Design Wrappers from here:
-#  https://gist.github.com/aaronsama/6b024a53a2646bfc38ce
-SimpleForm.setup do |config|
+# # # Material Design Wrappers from here:
+# # #  https://gist.github.com/aaronsama/6b024a53a2646bfc38ce
+# SimpleForm.setup do |config|
 
-  config.wrappers :mdl_field, tag: 'div', class: 'mdl-textfield mdl-js-textfield', error_class: 'mdl-textfield__error' do |b|
-    b.use :html5
-    b.use :input, class: 'mdl-textfield__input'
-    b.use :label, class: 'mdl-textfield__label'
-  end
+#   config.wrappers :mdl_field, tag: 'div', class: 'mdl-textfield mdl-js-textfield', error_class: 'mdl-textfield__error' do |b|
+#     b.use :html5
+#     b.use :input, class: 'mdl-textfield__input'
+#     b.use :label, class: 'mdl-textfield__label'
+#   end
 
-  config.wrappers :mdl_field_floating, tag: 'div', class: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label', error_class: 'mdl-textfield__error' do |b|
-    b.use :html5
-    b.use :input, class: 'mdl-textfield__input'
-    b.use :label, class: 'mdl-textfield__label'
-  end
+#   config.wrappers :mdl_field_floating, tag: 'div', class: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label', error_class: 'mdl-textfield__error' do |b|
+#     b.use :html5
+#     b.use :input, class: 'mdl-textfield__input'
+#     b.use :label, class: 'mdl-textfield__label'
+#   end
 
-end
+# end
