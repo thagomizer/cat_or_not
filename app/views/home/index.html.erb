@@ -1,5 +1,6 @@
 <h1>Cat or Not Winners</h1>
 
+<% unless @winners.length < 3 %>
 <table>
   <tr>
     <th>First</th>
@@ -18,5 +19,10 @@
   </tr>
 </table>
 
-<%= link_to("Vote On Cats", new_cat_vote_path(@cat)) %>
+<% end %>
+
+<% if @cat %>
+ <%= link_to("Vote On Cats", new_cat_vote_path(@cat)) %>
+<% end %>
+
 <%= link_to("Upload Your Cat", new_cat_path) %>

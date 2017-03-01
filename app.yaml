@@ -2,7 +2,7 @@ entrypoint: bundle exec rackup -p $PORT
 env: flex
 runtime: ruby
 health_check:
-  enable_health_check: False
+  enable_health_check: false
 env_variables:
   SECRET_KEY_BASE: 'mysecretkey'
   PUBLISHABLE_KEY: "pk_test_MvCgaVzdEUl9s39qujuCKHkl"
