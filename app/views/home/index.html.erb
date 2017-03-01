@@ -1,2 +1,21 @@
-<h1>Vote On Cats</h1>
-<%= link_to(@cat.name, new_cat_vote_path(@cat)) %>
+<h1>Cat or Not Winners</h1>
+
+<table>
+  <tr>
+    <th>First</th>
+    <th>Second</th>
+    <th>Third</th>
+  </tr>
+  <tr>
+    <td><%= image_tag @winners[0].pic.url(:medium) %></td>
+    <td><%= image_tag @winners[1].pic.url(:medium) %></td>
+    <td><%= image_tag @winners[2].pic.url(:medium) %></td>
+  </tr>
+  <tr>
+    <td><%= @winners[0].name %></td>
+    <td><%= @winners[1].name %></td>
+    <td><%= @winners[2].name %></td>
+  </tr>
+</table>
+
+<%= link_to("Vote On Cats", new_cat_vote_path(@cat)) %>
