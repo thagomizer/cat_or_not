@@ -1,9 +1,15 @@
-<%= simple_form_for(@vote) do |f| %>
+<figure>
+  <%= image_tag(@cat.pic.url(:medium), :alt => @cat.name) %>
+  <figcaption><%= @cat.name %></figcaption>
+</figure>    
+
+
+<%= simple_form_for(@vote, url: cat_votes_path) do |f| %>
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :score %>
-    <%= f.input :cat_id %>
+    <%= f.input :cat_id, as: :hidden %>
+    <%= f.input :score, collection: 1..10 %>
   </div>
 
   <div class="form-actions">

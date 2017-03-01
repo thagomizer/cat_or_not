@@ -28,16 +28,16 @@ SimpleForm.setup do |config|
     # extensions by default, you can change `b.optional` to `b.use`.
 
     # Calculates maxlength from length validations for string inputs
-    b.optional :maxlength
+    b.use :maxlength
 
     # Calculates pattern from format validations for string inputs
-    b.optional :pattern
+    b.use :pattern
 
     # Calculates min and max from length validations for numeric inputs
-    b.optional :min_max
+    b.use :min_max
 
     # Calculates readonly automatically from readonly attributes
-    b.optional :readonly
+    b.use :readonly
 
     ## Inputs
     b.use :label_input
@@ -117,7 +117,7 @@ SimpleForm.setup do |config|
   # in this configuration, which is recommended due to some quirks from different browsers.
   # To stop SimpleForm from generating the novalidate option, enabling the HTML5 validations,
   # change this configuration to true.
-  config.browser_validations = false
+  config.browser_validations = true
 
   # Collection of methods to detect if a file type was given.
   # config.file_methods = [ :mounted_as, :file?, :public_filename ]
@@ -163,21 +163,3 @@ SimpleForm.setup do |config|
   # Defines which i18n scope will be used in Simple Form.
   # config.i18n_scope = 'simple_form'
 end
-
-# # # Material Design Wrappers from here:
-# # #  https://gist.github.com/aaronsama/6b024a53a2646bfc38ce
-# SimpleForm.setup do |config|
-
-#   config.wrappers :mdl_field, tag: 'div', class: 'mdl-textfield mdl-js-textfield', error_class: 'mdl-textfield__error' do |b|
-#     b.use :html5
-#     b.use :input, class: 'mdl-textfield__input'
-#     b.use :label, class: 'mdl-textfield__label'
-#   end
-
-#   config.wrappers :mdl_field_floating, tag: 'div', class: 'mdl-textfield mdl-js-textfield mdl-textfield--floating-label', error_class: 'mdl-textfield__error' do |b|
-#     b.use :html5
-#     b.use :input, class: 'mdl-textfield__input'
-#     b.use :label, class: 'mdl-textfield__label'
-#   end
-
-# end

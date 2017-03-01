@@ -7,12 +7,11 @@
 ** DONE Validations
 * DONE Associations
 * DONE Add Material Design
-* TODO Upload Cats 
-
-
-* TODO Push to App Engine
+* DONE Upload Cats 
+* DONE Push to App Engine
 * TODO Store images in cloud storage
 * TODO Enable voting in the UI
 * TODO Cat Rank Summary
 * TODO Queue cats for voting via pub/sub
+* TODO Verify only cats are being uploaded
 

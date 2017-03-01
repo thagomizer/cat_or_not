@@ -35,6 +35,7 @@ gem "fog-google"
 gem "simple_form"
 gem "materialize-sass"
 gem "material_icons"
+gem 'bootstrap', '~> 4.0.0.alpha6'
 
 group :production do
   gem 'mysql2', '>= 0.3.18', '< 0.5'

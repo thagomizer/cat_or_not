@@ -1,0 +1,13 @@
+      Prefix Verb   URI Pattern                       Controller#Action
+  home_index GET    /home/index(.:format)             home#index
+   cat_votes POST   /cats/:cat_id/votes(.:format)     votes#create
+new_cat_vote GET    /cats/:cat_id/votes/new(.:format) votes#new
+        cats GET    /cats(.:format)                   cats#index
+             POST   /cats(.:format)                   cats#create
+     new_cat GET    /cats/new(.:format)               cats#new
+    edit_cat GET    /cats/:id/edit(.:format)          cats#edit
+         cat GET    /cats/:id(.:format)               cats#show
+             PATCH  /cats/:id(.:format)               cats#update
+             PUT    /cats/:id(.:format)               cats#update
+             DELETE /cats/:id(.:format)               cats#destroy
+        root GET    /                                 home#index

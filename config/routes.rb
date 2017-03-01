@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :cats
-  resources :votes
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  get 'home/index'
+
+  resources :cats do
+    resources :votes, only: [:new, :create]
+  end
+
+  root to: "home#index"
 end
