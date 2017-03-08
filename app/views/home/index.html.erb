@@ -1,25 +1,35 @@
-<h1>Cat or Not Winners</h1>
+<h1>Tind-purr Winners</h1>
 
 <% unless @winners.length < 3 %>
    <div class="row">
-     <div class="col4"><h3>First Place</h3></div>
-     <div class="col4"><h3>Second Place</h3></div>
-     <div class="col4"><h3>Third Place</h3></div>
-   </div>
-   <div class="row">
-     <div class="col4"><%= image_tag @winners[0].pic.url(:medium) %></div>
-     <div class="col4"><%= image_tag @winners[1].pic.url(:medium) %></div>
-     <div class="col4"><%= image_tag @winners[1].pic.url(:medium) %></div>
-   </div>
-   <div class="row">
-     <div class="col4"><%= @winners[0].name %></div>
-     <div class="col4"><%= @winners[1].name %></div>
-     <div class="col4"><%= @winners[1].name %></div>
+     <% @winners.each_with_index do |cat, i| %>
+     
+       <div class="col s4">
+         <h3 class="center-align"><%= (i + 1).ordinalize %></h3>
+         <figure>
+           <%= image_tag(cat.pic.url(:medium), alt: cat.name, class: "responsive-img") %>
+           <figcaption><%= cat.name %></figcaption>
+         </figure>    
+       </div>
+     <% end %>
    </div>
 <% end %>
 
-<% if @cat %>
- <%= link_to("Vote On Cats", new_cat_vote_path(@cat)) %>
-<% end %>
+<div class="row">
+  
 
-<%= link_to("Upload Your Cat", new_cat_path) %>
+</div>
+
+<div class="row">
+  <div class="col s4">
+    <% if @cat %>
+      <%= link_to("Vote On Cats", new_cat_vote_path(@cat), class: "waves-effect waves-light btn") %>
+      <% end %>
+  </div>
+  <div class="col s4">
+     <%= link_to("Upload Your Cat", new_cat_path, class: "waves-effect waves-light btn") %>
+  </div>
+  <div class="col s4">
+     <%= link_to("See All The Cats", cats_path, class: "waves-effect waves-light btn") %>
+  </div>
+</div>
