@@ -50,7 +50,5 @@ production:
   encoding: utf8
   pool: 5
   database: CatOrNot_production
-  username: rails
-  password: rails
-  host: 173.194.86.92
-
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
